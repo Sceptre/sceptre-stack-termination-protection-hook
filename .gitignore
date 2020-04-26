@@ -137,3 +137,9 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# jetbrains
+.idea/
+
+# temp
+temp/

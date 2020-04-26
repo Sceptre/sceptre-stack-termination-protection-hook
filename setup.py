@@ -1,23 +1,23 @@
 from setuptools import setup, find_packages
 
-__version__ = "0.0.1"
+__version__ = "1.1.0"
 
 
 # More information on setting these values:
 # https://github.com/Sceptre/project/wiki/sceptre-hook-template
 
 # lowercase, use `-` as separator.
-HOOK_NAME = 'sceptre-hook-template'
+HOOK_NAME = 'sceptre-stack-termination-protection-hook'
 # the hook call in sceptre e.g. !command_name.
-HOOK_COMMAND_NAME = 'custom_hook'
+HOOK_COMMAND_NAME = 'stack_termination_protection'
 HOOK_MODULE_NAME = 'hook.{}'.format(HOOK_COMMAND_NAME)  # do not change.
 # CamelCase name of hook class in hook.{HOOK_COMMAND_NAME}.
-HOOK_CLASS = 'CustomHook'
-HOOK_DESCRIPTION = ''  # one line summary description
+HOOK_CLASS = 'StackTerminationProtection'
+HOOK_DESCRIPTION = 'A Sceptre hook to enable and disable stack termination protection'
 # if multiple use a single string with comma separated names.
-HOOK_AUTHOR = 'Sceptre'
+HOOK_AUTHOR = 'zaro0508'
 # if multiple use single string with commas.
-HOOK_AUTHOR_EMAIL = 'sceptre@cloudreach.com'
+HOOK_AUTHOR_EMAIL = 'zaro0508@gmail.com'
 HOOK_URL = 'https://github.com/sceptre/{}'.format(HOOK_NAME)
 
 with open("README.md") as readme_file:

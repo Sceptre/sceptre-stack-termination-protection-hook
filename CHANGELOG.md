@@ -6,12 +6,10 @@ Categories: Added, Removed, Changed, Fixed, Nonfunctional, Deprecated
 
 <!--- All unreleased items go here  -->
 
-<!--- Example CHANGELOG entry
 
-## 0.1.0 (2019.07.02)
+## 1.1.0 (2020.04.26)
 
 ### Added
 
-- Initial hook code
+- Initial resolver code from https://github.com/zaro0508/sceptre-ssm-resolver
 
--->

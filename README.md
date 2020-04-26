@@ -1,14 +1,41 @@
-# README
+# Overview
 
-Add your hook readme here. Remember to include the following:
+The purpose of this hook is to enable and disable
+[stack termination protection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html).
 
-- Tell people how to install it (e.g. pip install ...).
-- Be clear about the purpose of the hook, its capabilities and limitations.
-- Tell people how to use it.
-- Give examples of the hook in use.
+A common use case is execute this hook with your CI/CD
+system. In that case you may need to execute this on every
+change.  That's where the
+[sceptre-date-resolver](https://github.com/zaro0508/sceptre-date-resolver)
+may help. It will allow you to force AWS cloudformation to execute the
+template on on every commit.
 
-Read our wiki to learn how to use this repo:
-https://github.com/Sceptre/project/wiki/Sceptre-Hook-Template
 
-If you have any questions or encounter an issue
-[please open an issue](https://github.com/Sceptre/project/issues/new)
+## Available Hooks
+
+### StackTermination
+
+Enables and disables cloudformation stack termination.
+
+Syntax:
+
+```yaml
+parameter|sceptre_user_data:
+    <name>: !stack_termination_protection <setting>
+```
+Valid setting:
+* enabled
+* disabled
+
+
+Example:
+
+Enable stack termination protection after creating stack
+and disable stack termination protection before stack deletion:
+```
+hooks:
+  after_create:
+    - !stack_termination_protection 'enabled'
+  before_delete:
+    - !stack_termination_protection 'disabled'
+```
