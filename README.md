@@ -6,7 +6,7 @@ The purpose of this hook is to enable and disable
 A common use case is execute this hook with your CI/CD
 system. In that case you may need to execute this on every
 change.  That's where the
-[sceptre-date-resolver](https://github.com/zaro0508/sceptre-date-resolver)
+[sceptre-date-resolver](https://github.com/sceptre/sceptre-date-resolver)
 may help. It will allow you to force AWS cloudformation to execute the
 template on on every commit.
 
