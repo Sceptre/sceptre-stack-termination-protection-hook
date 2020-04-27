@@ -8,6 +8,7 @@ from botocore.exceptions import ClientError
 
 from sceptre.hooks import Hook
 
+
 @six.add_metaclass(abc.ABCMeta)
 class StackTerminationProtection(Hook):
     """
